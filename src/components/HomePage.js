@@ -19,8 +19,10 @@ import {
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCat, faPerson } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom"
 
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box fontFamily="regular"  fontSize={'x-large'} bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -52,10 +54,10 @@ const HomePage = () => {
           <Flex direction={'column'} alignItems={'flex-start'}>
             <Heading fontSize={"5xl"} mt={"200px"}>Go anywhere, we got your pets covered.</Heading>
             <HStack pt={10}>
-              <Button _hover={{bg: "black"}} color={'white'}  bg={'black'} w={"fit-content"} p={5}>
+              <Button onClick={()=>navigate("servicesHome")} _hover={{bg: "black"}} color={'white'}  bg={'black'} w={"fit-content"} p={5}>
                 Book a sitter
               </Button>
-              <Button _hover={{bg: "black"}} color={'white'} bg={'gray'} w="fit-content" p={5}>
+              <Button onClick={()=>navigate("/registerSitter")} _hover={{bg: "black"}} color={'white'} bg={'gray'} w="fit-content" p={5}>
                 Register as a sitter
               </Button>
             </HStack>
