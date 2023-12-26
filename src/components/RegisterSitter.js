@@ -126,6 +126,7 @@ const RegisterSitter = (props) => {
                         )}
                       </Field>
                       </GridItem>
+                      <GridItem colSpan={2}>
                       <Field name='email'>
                         {({ field, form }) => (
                           <FormControl>
@@ -135,6 +136,7 @@ const RegisterSitter = (props) => {
                           </FormControl>
                         )}
                       </Field>
+                      </GridItem>
                       <Field name='password'>
                         {({ field, form }) => (
                           <FormControl>
@@ -183,11 +185,12 @@ const RegisterSitter = (props) => {
                         {({ field, form }) => (
                           <FormControl>
                             <FormLabel>Pets</FormLabel>
-                            <Input variant={"filled"} {...field} placeholder='maximum pets you can sit' />
+                            <Input variant={"filled"} {...field} placeholder='maximum pets' />
                             <FormErrorMessage>{form.errors.email}</FormErrorMessage>
                           </FormControl>
                         )}
                       </Field>
+                      <GridItem colSpan={2}>
                       <Field name='availability'>
                         {({ field, form }) => (
                           <FormControl>
@@ -197,6 +200,8 @@ const RegisterSitter = (props) => {
                           </FormControl>
                         )}
                       </Field>
+                      </GridItem>
+                      <GridItem colSpan={2}>
                       <Field name='canStayOvernight'>
                         {({ field, form }) => (
                           <FormControl>
@@ -206,6 +211,8 @@ const RegisterSitter = (props) => {
                           </FormControl>
                         )}
                       </Field>
+                      </GridItem>
+                      <GridItem colSpan={2}>
                       <Field name='startTime'>
                         {({ field, form }) => (
                           <FormControl>
@@ -215,7 +222,8 @@ const RegisterSitter = (props) => {
                           </FormControl>
                         )}
                       </Field>
-                      <GridItem colSpan={1}>
+                      </GridItem>
+                      <GridItem colSpan={2}>
                       <Field name='endTime'>
                         {({ field, form }) => (
                           <FormControl>
@@ -227,12 +235,13 @@ const RegisterSitter = (props) => {
                       </Field>
                       </GridItem>
                     </Grid>
-                    <Flex alignItems={"flex-end"}>
+                    <Flex justifyContent={"right"}>
                       <Button
                         mt={4}
                         colorScheme='teal'
                         isLoading={props.isSubmitting}
                         type='submit'
+                        bgColor={"black"}
                       >
                         Submit
                       </Button>
